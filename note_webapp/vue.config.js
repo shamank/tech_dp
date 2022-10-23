@@ -1,6 +1,9 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
   transpileDependencies: true,
+  publicPath:  proccess.env.NODE_ENV === 'production'
+  ? '/tech_dp/note_webapp'
+  : '/',
 
   pluginOptions: {
     vuetify: {
@@ -8,3 +11,4 @@ module.exports = defineConfig({
 		}
   }
 })
+ 
